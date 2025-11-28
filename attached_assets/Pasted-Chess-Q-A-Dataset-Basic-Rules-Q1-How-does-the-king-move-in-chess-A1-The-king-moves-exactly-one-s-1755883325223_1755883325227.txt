@@ -1,0 +1,106 @@
+Chess Q&A Dataset
+Basic Rules
+
+Q1. How does the king move in chess?
+A1. The king moves exactly one square in any direction: vertical, horizontal, or diagonal.
+
+Q2. How does the queen move in chess?
+A2. The queen moves any number of squares in any direction: vertical, horizontal, or diagonal.
+
+Q3. How does the rook move in chess?
+A3. The rook moves any number of squares vertically or horizontally, but not diagonally.
+
+Q4. How does the bishop move in chess?
+A4. The bishop moves any number of squares diagonally. It always stays on the same color square it started on.
+
+Q5. How does the knight move in chess?
+A5. The knight moves in an L-shape: two squares in one direction and then one square perpendicular. It is the only piece that can jump over other pieces.
+
+Q6. How does the pawn move in chess?
+A6. Pawns move one square forward, but capture one square diagonally forward. On their first move, pawns may move two squares forward.
+
+Special Rules
+
+Q7. What is castling?
+A7. Castling is a special move where the king moves two squares toward a rook, and the rook jumps over the king to the square next to it. Conditions:
+
+No pieces between king and rook.
+
+Neither king nor rook has moved.
+
+King is not in check, and does not move through/into check.
+
+Q8. What is en passant?
+A8. En passant is a special pawn capture: if an opponent’s pawn moves two squares forward from its starting position and lands beside your pawn, you can capture it as if it had moved only one square forward. Must be done immediately on the next move.
+
+Q9. What is promotion?
+A9. When a pawn reaches the last rank, it must be promoted into a queen, rook, bishop, or knight. Most players choose a queen.
+
+Q10. What is check?
+A10. A king is in check if it is under direct attack by an opponent’s piece. The player must make a move to remove the check.
+
+Q11. What is checkmate?
+A11. Checkmate happens when the king is in check and cannot escape by any legal move. The game ends immediately.
+
+Q12. What is stalemate?
+A12. Stalemate occurs when the player has no legal moves, but their king is not in check. The game ends in a draw.
+
+Opening Questions
+
+Q13. What is the best first move in chess?
+A13. The most popular first moves are 1. e4 (pawn to king’s fourth) and 1. d4 (pawn to queen’s fourth), because they control the center and open lines for bishops and queen.
+
+Q14. Why is controlling the center important?
+A14. Controlling the center (d4, d5, e4, e5) gives your pieces more mobility and restricts your opponent’s options.
+
+Q15. What is development in chess?
+A15. Development means moving your pieces from their starting positions to active squares where they can control the board. Knights and bishops should be developed early.
+
+Tactics
+
+Q16. What is a fork in chess?
+A16. A fork is when one piece attacks two or more enemy pieces at the same time. Knights are especially good at forking.
+
+Q17. What is a pin in chess?
+A17. A pin is when a piece cannot move because moving it would expose a more valuable piece behind it (usually the king or queen).
+
+Q18. What is a skewer in chess?
+A18. A skewer is when a valuable piece (like a king or queen) is attacked, and once it moves, a less valuable piece behind it can be captured.
+
+Q19. What is a discovered attack?
+A19. A discovered attack happens when one piece moves, revealing an attack from another piece behind it.
+
+Q20. What is a sacrifice in chess?
+A20. A sacrifice is when you deliberately give up a piece to gain a tactical or strategic advantage (like checkmate or winning material later).
+
+Strategy
+
+Q21. What are the 4 steps of move analysis?
+A21.
+
+Safety First – Is your king safe? Any threats?
+
+Piece Activity – Are your pieces well-placed?
+
+Tactics – Look for pins, forks, skewers, and traps.
+
+Strategy – Control the center, improve piece positions, plan for pawn breaks.
+
+Q22. When should you exchange pieces?
+A22. Exchange pieces when:
+
+It improves your position.
+
+You gain material advantage.
+
+You are under attack and want to simplify.
+Avoid exchanges if it helps your opponent.
+
+Q23. How can you checkmate with king and queen?
+A23. Move your queen to control ranks/files, push the enemy king to the board’s edge, and then bring your king closer. Finally, deliver checkmate by placing the queen one square away, supported by your king.
+
+Q24. How can you checkmate with king and rook?
+A24. Use the rook to cut off ranks/files and push the enemy king toward the edge. Bring your king closer and use your rook for the final checkmate.
+
+Q25. What should you do if you are losing material?
+A25. Look for counterplay (tactical chances, counter-attacks) or aim for stalemate/draw tricks if winning is impossible.

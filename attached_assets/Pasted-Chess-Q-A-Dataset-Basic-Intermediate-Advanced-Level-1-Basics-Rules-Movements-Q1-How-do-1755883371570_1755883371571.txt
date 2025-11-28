@@ -1,0 +1,174 @@
+Chess Q&A Dataset (Basic → Intermediate → Advanced)
+Level 1 – Basics (Rules & Movements)
+
+Q1. How does the king move in chess?
+A1. The king moves exactly one square in any direction: vertical, horizontal, or diagonal.
+
+Q2. How does the queen move in chess?
+A2. The queen moves any number of squares in any direction: vertical, horizontal, or diagonal.
+
+Q3. How does the rook move in chess?
+A3. The rook moves any number of squares vertically or horizontally.
+
+Q4. How does the bishop move in chess?
+A4. The bishop moves any number of squares diagonally and always stays on the same color square it started on.
+
+Q5. How does the knight move in chess?
+A5. The knight moves in an L-shape: two squares in one direction and then one square perpendicular. It can jump over other pieces.
+
+Q6. How does the pawn move in chess?
+A6. Pawns move one square forward, but capture one square diagonally forward. On their first move, they can move two squares forward.
+
+Level 2 – Special Rules
+
+Q7. What is castling?
+A7. Castling is a move where the king moves two squares toward a rook, and the rook jumps over the king. Conditions: no pieces between, neither has moved, and the king is not in/through check.
+
+Q8. What is en passant?
+A8. En passant is a special pawn capture when an enemy pawn moves two squares forward and lands beside your pawn. You may capture it as if it moved one square forward, but only on the next move.
+
+Q9. What is promotion?
+A9. When a pawn reaches the last rank, it must be promoted to a queen, rook, bishop, or knight (usually a queen).
+
+Q10. What is check?
+A10. A check is when the king is attacked directly. The player must move to escape.
+
+Q11. What is checkmate?
+A11. Checkmate is when the king is in check and cannot escape by any legal move. This ends the game.
+
+Q12. What is stalemate?
+A12. Stalemate is when the player has no legal moves, but the king is not in check → the game is a draw.
+
+Level 3 – Opening Principles
+
+Q13. What are the best first moves in chess?
+A13. The most common are 1.e4 (king’s pawn) and 1.d4 (queen’s pawn) to control the center.
+
+Q14. What are the main goals in the opening?
+A14.
+
+Control the center (d4, d5, e4, e5).
+
+Develop your pieces (knights & bishops).
+
+Castle early for king safety.
+
+Connect rooks by moving the queen out.
+
+Q15. What are some famous openings?
+A15.
+
+King’s Pawn Opening: 1.e4
+
+Queen’s Pawn Opening: 1.d4
+
+Sicilian Defense: 1.e4 c5
+
+French Defense: 1.e4 e6
+
+Ruy López: 1.e4 e5 2.Nf3 Nc6 3.Bb5
+
+Level 4 – Tactics (Short-Term Tricks)
+
+Q16. What is a fork?
+A16. A fork is when one piece attacks two or more enemy pieces at the same time.
+
+Q17. What is a pin?
+A17. A pin is when a piece cannot move because it would expose a more valuable piece (usually the king/queen) behind it.
+
+Q18. What is a skewer?
+A18. A skewer is when a valuable piece is attacked, and after it moves, a less valuable piece behind it is captured.
+
+Q19. What is a discovered attack?
+A19. A discovered attack happens when one piece moves, revealing an attack from another piece behind it.
+
+Q20. What is a sacrifice?
+A20. A sacrifice is when you deliberately give up material to gain a tactical or strategic advantage (like checkmate).
+
+Level 5 – Strategy (Long-Term Planning)
+
+Q21. What are the 4 steps of move analysis?
+A21.
+
+Safety First – Is my king safe? Any threats?
+
+Piece Activity – Are my pieces active?
+
+Tactics – Look for forks, pins, skewers.
+
+Strategy – Control the center, improve positions.
+
+Q22. When should you exchange pieces?
+A22.
+
+To simplify when you’re ahead in material.
+
+To reduce your opponent’s attacking chances.
+
+Avoid exchanges if your opponent benefits more.
+
+Q23. What is the importance of pawn structure?
+A23. Pawns shape the battlefield. Weak pawns (isolated, doubled, backward) are targets. Strong pawn chains give control and space.
+
+Q24. What are open, semi-open, and closed positions?
+A24.
+
+Open – Few pawns in the center, lots of piece activity (good for bishops).
+
+Closed – Pawns block the center, requiring pawn breaks (good for knights).
+
+Semi-open – One open file for rooks to control.
+
+Q25. Why is king safety important?
+A25. An unsafe king can be attacked quickly. Castling helps by moving the king away from the center and activating a rook.
+
+Level 6 – Endgames
+
+Q26. How to checkmate with king and queen?
+A26. Use the queen to push the enemy king to the edge, bring your king closer, and deliver mate with the queen supported by your king.
+
+Q27. How to checkmate with king and rook?
+A27. Use the rook to cut off ranks/files, push the enemy king to the edge, and bring your king close for the final checkmate.
+
+Q28. What is opposition in king endgames?
+A28. Opposition is when two kings face each other with one square in between. The side not to move has the advantage.
+
+Q29. What is the square rule in pawn endgames?
+A29. Draw an imaginary square from the pawn to promotion. If the enemy king can enter this square, the pawn can be stopped.
+
+Q30. Why are passed pawns important?
+A30. A passed pawn has no enemy pawns blocking its path to promotion, making it a strong winning asset.
+
+Level 7 – Advanced Concepts
+
+Q31. What is zugzwang?
+A31. Zugzwang is when a player is forced to move, but every possible move makes their position worse.
+
+Q32. What is prophylaxis?
+A32. Prophylaxis is making moves that prevent your opponent’s plans before they happen.
+
+Q33. What is an outpost?
+A33. An outpost is a strong square (usually for a knight) that cannot be attacked by enemy pawns.
+
+Q34. What is the difference between tactical and positional play?
+A34. Tactical play is about short-term tricks and combinations, while positional play focuses on long-term advantages like pawn structure, weak squares, and piece activity.
+
+Q35. What is a fortress in chess?
+A35. A fortress is a defensive setup where the weaker side builds a position that the stronger side cannot break, leading to a draw.
+
+Level 8 – Puzzle Training Examples
+
+Q36. Find checkmate in 1 move: White king on g1, queen on h5, black king on g8.
+A36. Qh7# delivers checkmate.
+
+Q37. White to move: How to win material? White knight on f3, white rook on e1, black queen on e7, black king on g8.
+A37. Rxe7 wins the queen because the knight defends the rook.
+
+Q38. Black to move: Find a fork. White king on g1, rook on d1, black knight on e3.
+A38. Nxd1 forks the rook and threatens the king if it moves into check.
+
+Q39. White to move: How to promote? White pawn on e7, black king on g8.
+A39. e8=Q promotes the pawn to a queen.
+
+Q40. Endgame: White king on e5, white pawn on d6, black king on e8. White to move.
+A40. Ke6 takes opposition and ensures pawn promotion.
