@@ -56,16 +56,15 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
-  // Use port 5000 on Replit, 3000 locally (macOS compatibility)
-  const isReplit = !!process.env.REPLIT_OUTBOUND_IP;
-  const port = isReplit ? 5000 : 3000;
-  const host = isReplit ? "0.0.0.0" : "127.0.0.1";
+  // Serve on port 5000 (required for Render and Replit)
+  const port = 5000;
+  const host = "0.0.0.0";
   
   server.listen({
     port,
     host,
-    reusePort: false,
+    reusePort: true,
   }, () => {
-    log(`serving on http://${host === "0.0.0.0" ? "localhost" : host}:${port}`);
+    log(`serving on port ${port}`);
   });
 })();
