@@ -1,18 +1,16 @@
-import { pgTable, text, serial, integer, boolean, json, timestamp } from "drizzle-orm/pg-core";
-import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
-export const users = pgTable("users", {
-  id: serial("id").primaryKey(),
-  username: text("username").notNull().unique(),
-  email: text("email").notNull().unique(),
-  password: text("password").notNull(),
-  skillLevel: text("skill_level").notNull().default('beginner'),
-  completedLessons: json("completed_lessons").$type<string[]>().default([]),
-  totalPoints: integer("total_points").notNull().default(0),
-  isVolunteer: boolean("is_volunteer").notNull().default(false),
-  subscriptionTier: text("subscription_tier").notNull().default('free'), // 'free', 'master', 'grandmaster'
-  avatar: json("avatar").$type<{
+export interface User {
+  id: number;
+  username: string;
+  email: string;
+  password: string;
+  skillLevel: string;
+  completedLessons: string[];
+  totalPoints: number;
+  isVolunteer: boolean;
+  subscriptionTier: string;
+  avatar: {
     piece: string;
     color: string;
     accessories: {
@@ -22,40 +20,49 @@ export const users = pgTable("users", {
       mouth?: string;
       ears?: string;
     };
-  }>().default({
-    piece: 'pawn',
-    color: '#1e3a8a',
-    accessories: {}
-  }),
-  createdAt: timestamp("created_at").defaultNow(),
-});
+  };
+  createdAt: Date;
+}
 
-export const events = pgTable("events", {
-  id: serial("id").primaryKey(),
-  title: text("title").notNull(),
-  description: text("description").notNull(),
-  date: timestamp("date").notNull(),
-  location: text("location"),
-  isOnline: boolean("is_online").notNull().default(false),
-  maxParticipants: integer("max_participants"),
-  createdAt: timestamp("created_at").defaultNow(),
-});
+export interface Event {
+  id: number;
+  title: string;
+  description: string;
+  date: Date;
+  location?: string;
+  isOnline: boolean;
+  maxParticipants?: number;
+  createdAt: Date;
+}
 
-export const insertUserSchema = createInsertSchema(users).omit({
-  id: true,
-  completedLessons: true,
-  totalPoints: true,
-  createdAt: true,
-}).extend({
+export const insertUserSchema = z.object({
+  username: z.string().min(3, "Username must be at least 3 characters"),
+  email: z.string().email("Invalid email address"),
   password: z.string().min(8, "Password must be at least 8 characters long"),
+  skillLevel: z.string().default('beginner'),
+  isVolunteer: z.boolean().default(false),
+  subscriptionTier: z.string().default('free'),
+  avatar: z.object({
+    piece: z.string(),
+    color: z.string(),
+    accessories: z.object({
+      eyebrows: z.string().optional(),
+      hair: z.string().optional(),
+      nose: z.string().optional(),
+      mouth: z.string().optional(),
+      ears: z.string().optional(),
+    }),
+  }).optional(),
 });
 
-export const insertEventSchema = createInsertSchema(events).omit({
-  id: true,
-  createdAt: true,
+export const insertEventSchema = z.object({
+  title: z.string().min(1, "Title is required"),
+  description: z.string().min(1, "Description is required"),
+  date: z.date(),
+  location: z.string().optional(),
+  isOnline: z.boolean().default(false),
+  maxParticipants: z.number().optional(),
 });
 
 export type InsertUser = z.infer<typeof insertUserSchema>;
-export type User = typeof users.$inferSelect;
 export type InsertEvent = z.infer<typeof insertEventSchema>;
-export type Event = typeof events.$inferSelect;

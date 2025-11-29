@@ -1,89 +1,16 @@
-import { users, events, type User, type InsertUser, type Event, type InsertEvent } from "@shared/schema";
-import { db } from "./db";
-import { eq } from "drizzle-orm";
+import type { User, InsertUser, Event, InsertEvent } from "@shared/schema";
 
 export interface IStorage {
-  // User operations
   getUser(id: number): Promise<User | undefined>;
   getUserByUsername(username: string): Promise<User | undefined>;
   getUserByEmail(email: string): Promise<User | undefined>;
   createUser(user: InsertUser): Promise<User>;
   updateUser(id: number, updates: Partial<User>): Promise<User>;
   
-  // Event operations
   getAllEvents(): Promise<Event[]>;
   createEvent(insertEvent: InsertEvent): Promise<Event>;
   updateEvent(id: number, updates: Partial<Event>): Promise<Event>;
   deleteEvent(id: number): Promise<void>;
-}
-
-export class DatabaseStorage implements IStorage {
-  // User operations
-  async getUser(id: number): Promise<User | undefined> {
-    const [user] = await db.select().from(users).where(eq(users.id, id));
-    return user || undefined;
-  }
-
-  async getUserByUsername(username: string): Promise<User | undefined> {
-    const [user] = await db.select().from(users).where(eq(users.username, username));
-    return user || undefined;
-  }
-
-  async getUserByEmail(email: string): Promise<User | undefined> {
-    const [user] = await db.select().from(users).where(eq(users.email, email));
-    return user || undefined;
-  }
-
-  async createUser(insertUser: InsertUser): Promise<User> {
-    const [user] = await db
-      .insert(users)
-      .values(insertUser)
-      .returning();
-    return user;
-  }
-
-  async updateUser(id: number, updates: Partial<User>): Promise<User> {
-    const [user] = await db
-      .update(users)
-      .set(updates)
-      .where(eq(users.id, id))
-      .returning();
-    
-    if (!user) {
-      throw new Error('User not found');
-    }
-    return user;
-  }
-
-  // Event operations
-  async getAllEvents(): Promise<Event[]> {
-    return await db.select().from(events);
-  }
-
-  async createEvent(insertEvent: InsertEvent): Promise<Event> {
-    const [event] = await db
-      .insert(events)
-      .values(insertEvent)
-      .returning();
-    return event;
-  }
-
-  async updateEvent(id: number, updates: Partial<Event>): Promise<Event> {
-    const [event] = await db
-      .update(events)
-      .set(updates)
-      .where(eq(events.id, id))
-      .returning();
-    
-    if (!event) {
-      throw new Error('Event not found');
-    }
-    return event;
-  }
-
-  async deleteEvent(id: number): Promise<void> {
-    await db.delete(events).where(eq(events.id, id));
-  }
 }
 
 export class MemStorage implements IStorage {
